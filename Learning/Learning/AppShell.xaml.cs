@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 namespace Learning
 {
     public partial class AppShell : Shell
@@ -6,5 +7,6 @@ namespace Learning
         {
             InitializeComponent();
         }
+
     }
 }
