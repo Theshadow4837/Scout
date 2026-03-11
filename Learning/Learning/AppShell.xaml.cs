@@ -1,4 +1,4 @@
-﻿namespace Learning
+namespace Learning
 {
     public partial class AppShell : Shell
     {
