@@ -9,12 +9,10 @@
     ".NETCoreApp,Version=v10.0/win-x64": {
       "Learning/1.0": {
         "dependencies": {
+          "FirebaseAuthentication.net": "4.1.0",
+          "FirebaseDatabase.net": "5.0.0",
           "Microsoft.Extensions.Logging.Debug": "10.0.0",
           "Microsoft.Maui.Controls": "10.0.20",
-          "Microsoft.Maui.Controls.HotReload.Forms": "18.0.0.0",
-          "Microsoft.VisualStudio.DesignTools.MobileTapContracts": "18.0.0.0",
-          "Microsoft.VisualStudio.DesignTools.TapContract": "18.0.0.0",
-          "Microsoft.VisualStudio.DesignTools.XamlTapContract": "18.0.0.0",
           "Microsoft.Web.WebView2.Core.Projection": "1.0.3179.45",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.57"
         },
@@ -31,6 +29,38 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.48161"
+          }
+        }
+      },
+      "FirebaseAuthentication.net/4.1.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "FirebaseDatabase.net/5.0.0": {
+        "dependencies": {
+          "LiteDB": "5.0.17",
+          "Newtonsoft.Json": "13.0.3",
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Firebase.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LiteDB/5.0.17": {
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.17.0",
+            "fileVersion": "5.0.17.0"
           }
         }
       },
@@ -513,35 +543,19 @@
           }
         }
       },
-      "Microsoft.Maui.Controls.HotReload.Forms/18.0.0.0": {
+      "Newtonsoft.Json/13.0.3": {
         "runtime": {
-          "Microsoft.Maui.Controls.HotReload.Forms.dll": {
-            "assemblyVersion": "18.0.0.0",
-            "fileVersion": "18.4.38681.55369"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
           }
         }
       },
-      "Microsoft.VisualStudio.DesignTools.MobileTapContracts/18.0.0.0": {
+      "System.Reactive/6.0.0": {
         "runtime": {
-          "Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll": {
-            "assemblyVersion": "18.0.0.0",
-            "fileVersion": "18.4.38681.55369"
-          }
-        }
-      },
-      "Microsoft.VisualStudio.DesignTools.TapContract/18.0.0.0": {
-        "runtime": {
-          "Microsoft.VisualStudio.DesignTools.TapContract.dll": {
-            "assemblyVersion": "18.0.0.0",
-            "fileVersion": "18.4.38681.55369"
-          }
-        }
-      },
-      "Microsoft.VisualStudio.DesignTools.XamlTapContract/18.0.0.0": {
-        "runtime": {
-          "Microsoft.VisualStudio.DesignTools.XamlTapContract.dll": {
-            "assemblyVersion": "18.0.0.0",
-            "fileVersion": "18.4.38681.55369"
+          "lib/net6.0-windows10.0.19041/System.Reactive.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.1"
           }
         }
       },
@@ -565,6 +579,27 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "FirebaseAuthentication.net/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pShi5v9cvT5bUWZDm261lO4uxJHvzOvpj46YHrL3uCB1WBeyCIcpoVakAQ2xHTu1dpmV86/BzSNRpqIGNp860g==",
+      "path": "firebaseauthentication.net/4.1.0",
+      "hashPath": "firebaseauthentication.net.4.1.0.nupkg.sha512"
+    },
+    "FirebaseDatabase.net/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tU2JF31msyK30cN1fqcRfeyRikobOfx9FKmgHVINHSN0NnP+DqG89KkFdd5ebefDLthG4Ac9yLnXjOpeEX+52g==",
+      "path": "firebasedatabase.net/5.0.0",
+      "hashPath": "firebasedatabase.net.5.0.0.nupkg.sha512"
+    },
+    "LiteDB/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cKPvkdlzIts3ZKu/BzoIc/Y71e4VFKlij4LyioPFATZMot+wB7EAm1FFbZSJez6coJmQUoIg/3yHE1MMU+zOdg==",
+      "path": "litedb/5.0.17",
+      "hashPath": "litedb.5.0.17.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/10.0.0": {
       "type": "package",
@@ -727,25 +762,19 @@
       "path": "microsoft.windowsappsdk/1.7.250909003",
       "hashPath": "microsoft.windowsappsdk.1.7.250909003.nupkg.sha512"
     },
-    "Microsoft.Maui.Controls.HotReload.Forms/18.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
-    "Microsoft.VisualStudio.DesignTools.MobileTapContracts/18.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.VisualStudio.DesignTools.TapContract/18.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.VisualStudio.DesignTools.XamlTapContract/18.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
+    "System.Reactive/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "path": "system.reactive/6.0.0",
+      "hashPath": "system.reactive.6.0.0.nupkg.sha512"
     },
     "Microsoft.Web.WebView2.Core.Projection/1.0.3179.45": {
       "type": "reference",

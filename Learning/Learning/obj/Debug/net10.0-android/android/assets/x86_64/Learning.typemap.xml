@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="Learning" mvid="3d182f121d9940ebb6d60e6b840355a6">
+  <java-to-managed>
+    <entry java-name="crc64096c2b9917dc0a61/MainActivity" managed-name="Learning.MainActivity, Learning" managed-type-token-id="33554444" />
+    <entry java-name="crc64096c2b9917dc0a61/MainApplication" managed-name="Learning.MainApplication, Learning" managed-type-token-id="33554445" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64096c2b9917dc0a61/MainActivity" managed-name="Learning.MainActivity, Learning" managed-type-token-id="33554444" />
+    <entry java-name="crc64096c2b9917dc0a61/MainApplication" managed-name="Learning.MainApplication, Learning" managed-type-token-id="33554445" />
+  </managed-to-java>
+</api>

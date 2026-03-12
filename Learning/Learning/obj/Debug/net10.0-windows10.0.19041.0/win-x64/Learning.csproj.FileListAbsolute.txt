@@ -414,10 +414,6 @@ C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\n
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Windows.SDK.NET.dll
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\WinRT.Runtime.dll
-C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Maui.Controls.HotReload.Forms.dll
-C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.MobileTapContracts.dll
-C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.TapContract.dll
-C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.VisualStudio.DesignTools.XamlTapContract.dll
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.Web.WebView2.Core.Projection.dll
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.UI.pri
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Microsoft.UI.Xaml.Controls.pri
@@ -431,7 +427,6 @@ C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\n
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlTypeInfo.g.cs
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xaml
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Platforms\Windows\App.xbf
-C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\XamlSaveStateFile.xml
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\Learning.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\sp\splashSplashScreen.scale-100.png
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\sp\splashSplashScreen.scale-125.png
@@ -521,3 +516,11 @@ C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\n
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\download.scale-100.webp
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Firebase.Auth.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Firebase.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\LiteDB.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\System.Reactive.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\\XamlSaveStateFile.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\resizetizer\r\download.scale-100.webp

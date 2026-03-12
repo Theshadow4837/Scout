@@ -4,7 +4,9 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "Learning.dll" comes first in this list. */
 		"Learning.dll",
 		"Firebase.Auth.dll",
+		"Firebase.dll",
 		"GoogleGson.dll",
+		"LiteDB.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",
@@ -23,6 +25,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Essentials.dll",
 		"Microsoft.Maui.Graphics.dll",
 		"Newtonsoft.Json.dll",
+		"System.Reactive.dll",
 		"Xamarin.Android.Glide.dll",
 		"Xamarin.Android.Glide.Annotations.dll",
 		"Xamarin.Android.Glide.DiskLruCache.dll",

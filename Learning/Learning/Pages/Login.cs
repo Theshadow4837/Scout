@@ -7,14 +7,14 @@ namespace Learning;
 
 public class Login : ContentPage
 {
-    private Entry _usernameEntry; // Treat this as Email
+    private Entry _usernameEntry; 
     private Entry _passwordEntry;
     private Label _errorLabel;
-    private readonly AuthService _authService; // 1. Added Service reference
+    private readonly AuthService _authService; 
 
     public Login()
     {
-        _authService = new AuthService(); // 2. Initialize Service
+        _authService = new AuthService(); 
 
         this.BackgroundColor = Color.FromUint(0xFF512BDF);
 
@@ -36,7 +36,7 @@ public class Login : ContentPage
         _passwordEntry = new Entry { IsPassword = true, Placeholder = "Enter password" };
         layout.Children.Add(_passwordEntry);
 
-        // 3. Fixed: Assigning to the class field _errorLabel
+        
         _errorLabel = new Label { TextColor = Colors.Red, IsVisible = false };
         layout.Children.Add(_errorLabel);
 
@@ -48,7 +48,7 @@ public class Login : ContentPage
 
         Content = layout;
 
-        // 4. Updated Login Logic
+        
         loginButton.Clicked += async (sender, e) =>
         {
             string email = _usernameEntry.Text?.Trim();
@@ -61,17 +61,18 @@ public class Login : ContentPage
                 return;
             }
 
-            // Call Firebase to sign in
+            
             var user = await _authService.SignInAsync(email, password);
 
             if (user != null)
             {
-                // Success! Navigate to the main app
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Preferences.Set("userId", user.User.Uid);
+
+                Application.Current.MainPage = new NavigationPage(new TeamPage(user.User.Uid));
             }
             else
             {
-                // Failure
+                
                 _errorLabel.Text = "Invalid email or password";
                 _errorLabel.IsVisible = true;
             }
