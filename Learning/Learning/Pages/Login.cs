@@ -2,6 +2,7 @@ using System;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
 using Firebase.Auth;
+using Learning.Pages;
 
 namespace Learning;
 
@@ -11,6 +12,7 @@ public class Login : ContentPage
     private Entry _passwordEntry;
     private Label _errorLabel;
     private readonly AuthService _authService; 
+    string savedTeamCode = Preferences.Get("MyTeamCode", null);
 
     public Login()
     {
@@ -68,7 +70,14 @@ public class Login : ContentPage
             {
                 Preferences.Set("userId", user.User.Uid);
 
-                Application.Current.MainPage = new NavigationPage(new TeamPage(user.User.Uid));
+                if (string.IsNullOrEmpty(savedTeamCode))
+                {
+                    Application.Current.MainPage = new NavigationPage(new TeamPage(savedTeamCode));
+                }
+               else
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+                }
             }
             else
             {
