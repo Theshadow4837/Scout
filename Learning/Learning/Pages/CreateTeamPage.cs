@@ -65,9 +65,8 @@ public class Team
 				await _dbClient.Child("teams").Child(num).PutAsync(newTeam);
 				await DisplayAlert("Success", $"Team {name} created!", "OK");
 
-                Preferences.Set("MyTeamCode", num);
 
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+				Application.Current.MainPage = new NavigationPage(new MainPage());
 
             }
 		};

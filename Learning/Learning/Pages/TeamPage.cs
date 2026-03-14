@@ -44,9 +44,9 @@ public class TeamPage : ContentPage
                     await _dbClient.Child("teams").Child(code).PutAsync(team);
                     await DisplayAlert("Success", $"Joined {team.TeamName}!", "OK");
 
-                    Preferences.Set("MyTeamCode", code);
+                    Preferences.Set("teamCode", code);
 
-                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}"); 
+                    Application.Current.MainPage = new NavigationPage(new MainPage());
                 }
                 else { await DisplayAlert("Info", "Already a member.", "OK"); }
             }

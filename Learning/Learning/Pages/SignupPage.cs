@@ -40,7 +40,7 @@ public class SignupPage : ContentPage
             if (result != null)
             {
                 // Success!
-                await DisplayAlert("Success", "Account Created!", "OK");
+                await DisplayAlert("Success", "Account created in Firebase!", "OK");
                 await Navigation.PopAsync();
             }
             else

@@ -7,34 +7,8 @@
     Title="Learning">
 
     <ShellContent
-        Shell.NavBarIsVisible="False"
-        Shell.TabBarIsVisible="False"      
+        Title="Login"
         ContentTemplate="{DataTemplate local:Login}"
         Route="Login" />
-    
-    
-    
-        <FlyoutItem FlyoutDisplayOptions="AsMultipleItems"
-        Title="Main Menu"
-        Route="MainPage">
-        <ShellContent
-            Title="Main Menu"
-            Shell.NavBarIsVisible="True"
-            Shell.TabBarIsVisible="False"
-            ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage" />
-
-        <ShellContent
-            Title="SignUp"
-            ContentTemplate="{DataTemplate local:Pages.SignupPage}"
-            Route="SignupPage" />
-
-    </FlyoutItem>
-
-
-    <MenuFlyoutItem
-        Text="Logout"
-        Clicked="OnLogoutClicked" />
-
 
 </Shell>
