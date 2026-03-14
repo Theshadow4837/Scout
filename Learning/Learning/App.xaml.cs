@@ -7,6 +7,8 @@ namespace Learning
         public App()
         {
             InitializeComponent();
+
+
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

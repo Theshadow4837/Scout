@@ -62,11 +62,13 @@ public class Team
 					Members = new List<string> { _userId }
 				};
 
-				await _dbClient.Child("teams").Child(num).PutAsync(newTeam);
+                Preferences.Set("MyTeamCode", num);
+
+                await _dbClient.Child("teams").Child(num).PutAsync(newTeam);
 				await DisplayAlert("Success", $"Team {name} created!", "OK");
 
 
-				Application.Current.MainPage = new NavigationPage(new MainPage());
+                await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
 
             }
 		};

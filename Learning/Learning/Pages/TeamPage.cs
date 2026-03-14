@@ -46,7 +46,7 @@ public class TeamPage : ContentPage
 
                     Preferences.Set("teamCode", code);
 
-                    Application.Current.MainPage = new NavigationPage(new MainPage());
+                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
                 }
                 else { await DisplayAlert("Info", "Already a member.", "OK"); }
             }

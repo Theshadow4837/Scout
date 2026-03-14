@@ -5,12 +5,21 @@ using Firebase.Auth;
 
 namespace Learning;
 
+public class TeamForm
+{
+    public string FormTitle { get; set; }
+    public List<string> Questions { get; set; } = new List<string>();
+    public string Id { get; internal set; }
+}
+
+
 public class Login : ContentPage
 {
     private Entry _usernameEntry; 
     private Entry _passwordEntry;
     private Label _errorLabel;
-    private readonly AuthService _authService; 
+    private readonly AuthService _authService;
+    string savedTeamCode = Preferences.Get("MyTeamCode", null);
 
     public Login()
     {
@@ -68,7 +77,15 @@ public class Login : ContentPage
             {
                 Preferences.Set("userId", user.User.Uid);
 
-                Application.Current.MainPage = new NavigationPage(new TeamPage(user.User.Uid));
+                if (string.IsNullOrEmpty(Preferences.Get("teamCode", null)))
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+                }
+                else
+                {
+
+                    await Navigation.PushAsync(new TeamPage(savedTeamCode));
+                }
             }
             else
             {
@@ -83,4 +100,5 @@ public class Login : ContentPage
             await Navigation.PushAsync(new Pages.SignupPage());
         };
     }
+
 }

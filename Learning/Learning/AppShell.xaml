@@ -4,11 +4,43 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Learning"
-    Title="Learning">
+       Title="Learning">
 
     <ShellContent
-        Title="Login"
+        Shell.NavBarIsVisible="False"
+        Shell.TabBarIsVisible="False"      
         ContentTemplate="{DataTemplate local:Login}"
         Route="Login" />
+
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems"
+        Route="MainPage">
+        <ShellContent
+            Title="Main Menu"
+            Shell.NavBarIsVisible="True"
+            Shell.TabBarIsVisible="False"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+    Title="Create Form"
+            Shell.TabBarIsVisible="False"
+    ContentTemplate="{DataTemplate local:Pages.CreateFormPage}"
+    Route="CreateFormPage" />
+
+        
+            
+    </FlyoutItem>
+
+    <MenuFlyoutItem
+        Text="View Forms"
+        Clicked="OnFormsClicked" />
+
+
+    <MenuFlyoutItem
+        Text="Logout"
+        Clicked="OnLogoutClicked" />
+
 
 </Shell>

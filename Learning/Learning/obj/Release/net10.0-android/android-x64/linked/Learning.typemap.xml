@@ -1,8 +1,0 @@
-<api type="release" assembly-name="Learning" mvid="79161f4dad104cad98335e75e7696a7b">
-  <module assembly-name="Learning" mvid="79161f4dad104cad98335e75e7696a7b" mvid-bytes="TR8WeRCtrUyYM15152lqew==">
-    <types-scratch>
-      <entry key="crc64096c2b9917dc0a61/MainActivity" java-name="crc64096c2b9917dc0a61/MainActivity" managed-type-name="Learning.MainActivity" token="33554442" />
-      <entry key="crc64096c2b9917dc0a61/MainApplication" java-name="crc64096c2b9917dc0a61/MainApplication" managed-type-name="Learning.MainApplication" token="33554443" />
-    </types-scratch>
-  </module>
-</api>
