@@ -2,6 +2,7 @@ using System;
 using Microsoft.Maui.Controls;
 // Make sure to include the namespace where your AuthService is located
 using Learning;
+using Firebase.Database;
 
 namespace Learning.Pages;
 
@@ -11,6 +12,7 @@ public class SignupPage : ContentPage
     Entry passwordEntry;
     // 1. Create a field for your Auth Service
     private readonly AuthService _authService;
+    private FirebaseClient _dbClient = new FirebaseClient("https://test-3b247-default-rtdb.firebaseio.com/");
 
     public SignupPage()
     {

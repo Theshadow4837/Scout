@@ -2,8 +2,11 @@ using System;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Storage;
 using Firebase.Auth;
+using Learning.Pages;
+using Firebase.Database;
 
 namespace Learning;
+
 
 public class TeamForm
 {
@@ -15,15 +18,16 @@ public class TeamForm
 
 public class Login : ContentPage
 {
-    private Entry _usernameEntry; 
+    private Entry _usernameEntry;
     private Entry _passwordEntry;
     private Label _errorLabel;
     private readonly AuthService _authService;
-    string savedTeamCode = Preferences.Get("MyTeamCode", null);
+    string savedTeamCode = Preferences.Get("teamCode", null);
 
+    private FirebaseClient _dbClient = new FirebaseClient("https://test-3b247-default-rtdb.firebaseio.com/");
     public Login()
     {
-        _authService = new AuthService(); 
+        _authService = new AuthService();
 
         this.BackgroundColor = Color.FromUint(0xFF512BDF);
 
@@ -45,7 +49,7 @@ public class Login : ContentPage
         _passwordEntry = new Entry { IsPassword = true, Placeholder = "Enter password" };
         layout.Children.Add(_passwordEntry);
 
-        
+
         _errorLabel = new Label { TextColor = Colors.Red, IsVisible = false };
         layout.Children.Add(_errorLabel);
 
@@ -57,7 +61,7 @@ public class Login : ContentPage
 
         Content = layout;
 
-        
+
         loginButton.Clicked += async (sender, e) =>
         {
             string email = _usernameEntry.Text?.Trim();
@@ -70,35 +74,42 @@ public class Login : ContentPage
                 return;
             }
 
-            
+
             var user = await _authService.SignInAsync(email, password);
 
             if (user != null)
             {
-                Preferences.Set("userId", user.User.Uid);
+                string uid = user.User.Uid;
+                Preferences.Set("userId", uid);
 
-                if (string.IsNullOrEmpty(Preferences.Get("teamCode", null)))
+                
+                string localCode = Preferences.Get("MyTeamCode", "");
+
+                if (!string.IsNullOrWhiteSpace(localCode))
                 {
                     await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
                 }
                 else
                 {
+                   
+                    var allTeams = await _dbClient.Child("teams").OnceAsync<Team>();
 
-                    await Navigation.PushAsync(new TeamPage(savedTeamCode));
+                    var myTeam = allTeams.FirstOrDefault(t =>
+                        t.Object.Members != null && t.Object.Members.Contains(uid));
+
+                    if (myTeam != null)
+                    {
+                        
+                        Preferences.Set("MyTeamCode", myTeam.Object.TeamCode);
+                        await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+                    }
+                    else
+                    {
+                        
+                        await Navigation.PushAsync(new TeamPage(uid));
+                    }
                 }
             }
-            else
-            {
-                
-                _errorLabel.Text = "Invalid email or password";
-                _errorLabel.IsVisible = true;
-            }
         };
-
-        signupButton.Clicked += async (s, e) =>
-        {
-            await Navigation.PushAsync(new Pages.SignupPage());
-        };
-    }
-
+        }
 }

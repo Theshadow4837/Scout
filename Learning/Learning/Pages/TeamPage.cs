@@ -38,9 +38,12 @@ public class TeamPage : ContentPage
             var team = await _dbClient.Child("teams").Child(code).OnceSingleAsync<Pages.Team>();
             if (team != null)
             {
-                if (!team.Members.Contains(_userId))
+                if (!team.Members.Contains(Preferences.Get("userId", null)))
                 {
-                    team.Members.Add(_userId);
+                    team.Members.Add(Preferences.Get("userId", null));
+
+                    Preferences.Set("teamCode", code);
+
                     await _dbClient.Child("teams").Child(code).PutAsync(team);
                     await DisplayAlert("Success", $"Joined {team.TeamName}!", "OK");
 

@@ -24,8 +24,7 @@ namespace Learning
         private async void OnLogoutClicked(object sender, EventArgs e)
         {
 
-            Preferences.Remove("UserId");
-            Preferences.Remove("MyTeamCode");
+            Preferences.Clear();
 
             await Shell.Current.GoToAsync($"//{nameof(Login)}");
         }

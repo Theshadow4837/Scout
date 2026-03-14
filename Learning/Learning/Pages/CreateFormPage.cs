@@ -87,7 +87,7 @@ public class CreateFormPage : ContentPage
 
 	private async Task SaveFormToFirebase()
 	{
-		string teamCode = Preferences.Get("teamCode", null);
+		string teamCode = Preferences.Get("MyTeamCode", null);
 		if (string.IsNullOrEmpty(teamCode)) return;
 
 		var newForm = new TeamForm

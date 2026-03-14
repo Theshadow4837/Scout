@@ -8,8 +8,8 @@ namespace Learning.Pages;
 
 public class Team
 {
-	public string TeamCode { get; set; }
 	public string TeamName { get; set; }
+	public string TeamCode { get; set; }
 	public string CreatorId { get; set; }
 	public List<string> Members { get; set; } = new List<string>();
 }
@@ -58,11 +58,11 @@ public class Team
 				{
 					TeamCode = num,
 					TeamName = name,
-					CreatorId = _userId,
-					Members = new List<string> { _userId }
+					CreatorId = Preferences.Get("userId", null),
+					Members = new List<string> { Preferences.Get("userId", null) }
 				};
 
-                Preferences.Set("MyTeamCode", num);
+                Preferences.Set("teamCode", num);
 
                 await _dbClient.Child("teams").Child(num).PutAsync(newTeam);
 				await DisplayAlert("Success", $"Team {name} created!", "OK");
