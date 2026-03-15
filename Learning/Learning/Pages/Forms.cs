@@ -23,8 +23,8 @@ public class TeamForm
 
     [JsonProperty("createdat")]
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public object Answers { get; internal set; }
 
-    
     public TeamForm() 
 	{ 
 	

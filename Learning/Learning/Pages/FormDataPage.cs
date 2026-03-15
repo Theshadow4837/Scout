@@ -1,6 +1,5 @@
 using Firebase.Database;
 using Firebase.Database.Query;
-using Learning.Pages;
 
 namespace Learning.Pages;
 
@@ -36,52 +35,44 @@ public class FormDataPage : ContentPage
 		await LoadFormData();
     }
 
-	private async Task LoadFormData()
-	{
-		try
-		{
-			_listContainer.Children.Clear();
-			string teamCode = Preferences.Get("MyTeamCode", Preferences.Get("teamCode", null));
-			var firebaseResult = await _dbClient
-				.Child("teams")
-				.Child(teamCode)
-				.Child("forms")
-				.OnceAsync<TeamForm>();
-			if (firebaseResult == null || !firebaseResult.Any())
-			{
-				_listContainer.Children.Add(new Label { Text = "No form data found.", FontSize = 16, TextColor = Colors.Gray });
-				return;
-			}
-            foreach (var item in firebaseResult)
-            {
-                var data = item.Object;
+    private async Task LoadFormData()
+    {
+        _listContainer.Children.Clear();
+        string teamCode = Preferences.Get("MyTeamCode", "");
 
-                // Create a clickable card for each submission
-                var frame = new Frame
-                {
-                    HasShadow = true,
-                    BorderColor = Colors.LightGray,
-                    CornerRadius = 8,
-                    Padding = 15,
-                    Margin = new Thickness(0, 5),
-                    BackgroundColor = Color.FromArgb("#212121"), // Dark theme friendly
-                    Content = new VerticalStackLayout
-                    {
-                        Children = {
-                            new Label { Text = (string)data.FormTitle, FontSize = 18, FontAttributes = FontAttributes.Bold, TextColor = Colors.White },
-                            new Label { Text = $"By: {data.Id}", FontSize = 14, TextColor = Colors.LightGray },
-                            new Label { Text = $"Date: {data.CreatedAt}", FontSize = 12, TextColor = Colors.Gray }
-                        }
-                    }
-                };
-                _listContainer.Children.Add(frame);
-			}
-		}
-		catch (Exception ex)
-		{
-			await DisplayAlert("Error", $"Failed to load form data: {ex.Message}", "OK");
-		}
-	}
+        
+        var rawSubmissions = await _dbClient
+            .Child("teams")
+            .Child(teamCode)
+            .Child("forms")
+            .OnceAsync<TeamForm>();
+
+        
+        var grouped = rawSubmissions
+            .GroupBy(s => (string)s.Object.FormTitle)
+            .ToList();
+
+        foreach (var group in grouped)
+        {
+            var btn = new Button
+            {
+                BackgroundColor = Color.FromRgb(188, 16, 16),
+                Text = $"{group.Key} ({group.Count()} Submissions)",
+                Margin = 10
+            };
+
+            btn.Clicked += async (s, e) => {
+
+                var listToSend = group.Select(x => (object)x).ToList();
+
+                if (listToSend.Count == 0) { await DisplayAlert("Error", "List is empty", "OK"); return; }
+
+                await Navigation.PushAsync(new Pages.SubmissionViewerPage(listToSend));
+            };
+
+            _listContainer.Children.Add(btn);
+        }
+    }
 
 
 
