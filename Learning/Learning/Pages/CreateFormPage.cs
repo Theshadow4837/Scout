@@ -17,6 +17,7 @@ public class CreateFormPage : ContentPage
 	{
 		Title = "Create Form";
 
+        this.BackgroundColor = Color.FromRgb(12, 12, 12);
 
         _formTitleEntry = new Entry
         {
@@ -30,7 +31,7 @@ public class CreateFormPage : ContentPage
         var header = new Label
 		{
 			Text = "Form Builder",
-			FontSize = 24,
+			FontSize = 40,
 			HorizontalOptions = LayoutOptions.Center,
 		};
 
@@ -39,14 +40,16 @@ public class CreateFormPage : ContentPage
 		var addQuestionBtn = new Button
 		{
 			Text = "Add Question",
-			BackgroundColor = Colors.Green,
+            BackgroundColor = Color.FromRgb(188, 16, 16),
 			TextColor = Colors.White,
 		};
 
 		var saveFormBtn = new Button
 		{
 			Text = "Publish Form",
-			Margin = new Thickness(0, 20, 0, 0),
+            BackgroundColor = Color.FromRgb(188, 16, 16),
+			TextColor = Colors.White,
+            Margin = new Thickness(0, 20, 0, 0),
 		};
 
 
@@ -90,7 +93,21 @@ public class CreateFormPage : ContentPage
 		string teamCode = Preferences.Get("MyTeamCode", null);
 		if (string.IsNullOrEmpty(teamCode)) return;
 
-		var newForm = new TeamForm
+		if (string.IsNullOrWhiteSpace(_formTitleEntry.Text))
+		{
+			await DisplayAlert("Error", "Please enter a form title.", "OK");
+			return;
+        }
+
+
+		if (_questionEntries.Count == 0 || _questionEntries.Any(q => string.IsNullOrWhiteSpace(q.Text)))
+		{
+			await DisplayAlert("Error", "Please add at least one question and ensure all questions are filled out.", "OK");
+			return;
+        }
+
+
+        var newForm = new TeamForm
 		{
 			Id = Guid.NewGuid().ToString(),
 			FormTitle = _formTitleEntry.Text,

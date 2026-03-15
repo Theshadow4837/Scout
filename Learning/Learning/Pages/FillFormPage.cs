@@ -13,7 +13,10 @@ public class FillFormPage : ContentPage
 
     public FillFormPage(Learning.Pages.TeamForm form)
 	{
-		if (form == null)
+
+        this.BackgroundColor = Color.FromRgb(12, 12, 12);
+
+        if (form == null)
 		{
 			Content = new Label { Text = "Form data is missing.", TextColor = Colors.Red, HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
 			return;
@@ -38,7 +41,7 @@ public class FillFormPage : ContentPage
             }
 		}
 
-		var submitBtn = new Button { Text = "Submit Answers", BackgroundColor = Colors.Blue, TextColor = Colors.White, Margin = new Thickness(0, 20, 0, 0) };
+		var submitBtn = new Button { Text = "Submit Answers", BackgroundColor = Color.FromRgb(188, 16, 16), TextColor = Colors.White, Margin = new Thickness(0, 20, 0, 0) };
 
 		submitBtn.Clicked += OnSubmitClicked;
 		mainstack.Children.Add(submitBtn);
@@ -49,10 +52,17 @@ public class FillFormPage : ContentPage
 
 	private async void OnSubmitClicked(object sender, EventArgs e)
 	{
+		if (_answerEntries.Any(x => string.IsNullOrEmpty(x.Text)))
+		{
+			await DisplayAlert("Validation Error", "Please answer all questions before submitting.", "OK");
+			return;
+        }
+
+
 		try
 		{
 			var teamCode = Preferences.Get("MyTeamCode", null);
-			var userId = Preferences.Get("UserId", "Anonymous");
+			var userId = Preferences.Get("userId", "Anonymous");
 
 			var userAnswers = _answerEntries.Select(entry => entry.Text ?? "").ToList();
 
@@ -72,8 +82,8 @@ public class FillFormPage : ContentPage
 				.PostAsync(submission);
 
 			await DisplayAlert("Success", "Your answers have been submitted!", "OK");
-			await Navigation.PopAsync();
-		}
+			await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+        }
 		catch (Exception ex)
 		{
 			await DisplayAlert("Error", $"Failed to submit answers: {ex.Message}", "OK");

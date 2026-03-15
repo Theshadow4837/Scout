@@ -524,3 +524,5 @@ C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\n
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\DocumentFormat.OpenXml.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\bin\Debug\net10.0-windows10.0.19041.0\win-x64\DocumentFormat.OpenXml.Framework.dll

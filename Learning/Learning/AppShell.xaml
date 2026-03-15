@@ -7,15 +7,20 @@
        Title="Learning">
 
     <ShellContent
+        FlyoutItemIsVisible="False"
         Shell.NavBarIsVisible="False"
         Shell.TabBarIsVisible="False"      
         ContentTemplate="{DataTemplate local:Login}"
         Route="Login" />
-
-
+    
+    <ShellContent
+        FlyoutItemIsVisible="False"
+        Shell.TabBarIsVisible="False"      
+        ContentTemplate="{DataTemplate local:TeamForm}"
+        Route="TeamForm" />
 
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems"
-        Route="MainPage">
+        >
         <ShellContent
             Title="Main Menu"
             Shell.NavBarIsVisible="True"
@@ -26,16 +31,22 @@
         <ShellContent
     Title="Create Form"
             Shell.TabBarIsVisible="False"
-    ContentTemplate="{DataTemplate local:Pages.CreateFormPage}"
-    Route="CreateFormPage" />
+            ContentTemplate="{DataTemplate local:Pages.CreateFormPage}"
+            Route="CreateFormPage" />
 
-        
-            
+        <ShellContent
+    Title="Do Forms"
+            Shell.TabBarIsVisible="False"
+            ContentTemplate="{DataTemplate local:Pages.Forms}"
+            Route="Forms" />
+
+        <ShellContent
+    Title="View Submissions"
+            Shell.TabBarIsVisible="False"
+            ContentTemplate="{DataTemplate local:Pages.FormDataPage}"
+            Route="FormDataPage" />
+
     </FlyoutItem>
-
-    <MenuFlyoutItem
-        Text="View Forms"
-        Clicked="OnFormsClicked" />
 
 
     <MenuFlyoutItem

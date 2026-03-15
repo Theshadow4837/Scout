@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Learning.dll" comes first in this list. */
 		"Learning.dll",
+		"DocumentFormat.OpenXml.dll",
+		"DocumentFormat.OpenXml.Framework.dll",
 		"Firebase.Auth.dll",
 		"Firebase.dll",
 		"GoogleGson.dll",
@@ -25,6 +27,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Essentials.dll",
 		"Microsoft.Maui.Graphics.dll",
 		"Newtonsoft.Json.dll",
+		"System.IO.Packaging.dll",
 		"System.Reactive.dll",
 		"Xamarin.Android.Glide.dll",
 		"Xamarin.Android.Glide.Annotations.dll",

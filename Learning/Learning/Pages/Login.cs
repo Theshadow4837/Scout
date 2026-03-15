@@ -29,12 +29,14 @@ public class Login : ContentPage
     {
         _authService = new AuthService();
 
-        this.BackgroundColor = Color.FromUint(0xFF512BDF);
+        this.BackgroundColor = Color.FromRgb(12,12,12);
+        
 
         var layout = new VerticalStackLayout
         {
             Margin = new Thickness(15),
             Padding = new Thickness(30, 60, 30, 30),
+            Spacing = 2,
             Children =
             {
                 new Label { Text = "Please log in", FontSize = 30, TextColor = Colors.White },
@@ -53,10 +55,10 @@ public class Login : ContentPage
         _errorLabel = new Label { TextColor = Colors.Red, IsVisible = false };
         layout.Children.Add(_errorLabel);
 
-        var loginButton = new Button { Text = "Login", BackgroundColor = Color.FromRgb(0, 148, 255) };
+        var loginButton = new Button { Text = "Login", BackgroundColor = Color.FromRgb(188, 16, 16) };
         layout.Children.Add(loginButton);
 
-        var signupButton = new Button { Text = "Create Account" };
+        var signupButton = new Button { Text = "Create Account", BackgroundColor = Color.FromRgb(188, 16, 16) };
         layout.Children.Add(signupButton);
 
         Content = layout;
@@ -74,6 +76,10 @@ public class Login : ContentPage
                 return;
             }
 
+            signupButton.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new SignupPage());
+            };
 
             var user = await _authService.SignInAsync(email, password);
 

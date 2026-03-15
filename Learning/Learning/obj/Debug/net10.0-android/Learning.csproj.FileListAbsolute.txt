@@ -1630,3 +1630,12 @@ C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\n
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.Framework.jlo.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.Framework.typemap.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.jlo.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\DocumentFormat.OpenXml.typemap.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\System.IO.Packaging.dll
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\System.IO.Packaging.jlo.xml
+C:\Users\Programming\Documents\GitHub\App Learning\Learning\Learning\obj\Debug\net10.0-android\android\assets\arm64-v8a\System.IO.Packaging.typemap.xml

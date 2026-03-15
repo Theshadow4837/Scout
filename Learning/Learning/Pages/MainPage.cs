@@ -2,14 +2,15 @@ namespace Learning;
 
 public partial class MainPage : ContentPage
 {
+
 	public MainPage()
 	{
+		this.BackgroundColor = Color.FromRgb(12, 12, 12);
 
-
-		var titleLabel = new Label
+        var titleLabel = new Label
 		{
 			Text = "Team Dashboard",
-			FontSize = 28,
+			FontSize = 40,
 			HorizontalOptions = LayoutOptions.Center,
 			Margin = new Thickness(0, 20, 0, 10)
         };
@@ -17,7 +18,7 @@ public partial class MainPage : ContentPage
 		var createFormBtn = new Button
 		{
 			Text = "Create Form",
-			BackgroundColor = Colors.Green,
+            BackgroundColor = Color.FromRgb(188, 16, 16),
 			TextColor = Colors.White,
 			Margin = new Thickness(0, 10, 0, 0)
 		};
@@ -25,7 +26,7 @@ public partial class MainPage : ContentPage
 		var viewFormsBtn = new Button
 		{
 			Text = "View Forms",
-			BackgroundColor = Colors.Blue,
+            BackgroundColor = Color.FromRgb(188, 16, 16),
 			TextColor = Colors.White,
 			Margin = new Thickness(0, 10, 0, 0)
 		};
@@ -33,7 +34,7 @@ public partial class MainPage : ContentPage
         var viewDataBtn = new Button
 		{
 			Text = "View Data",
-			BackgroundColor = Colors.Green,
+            BackgroundColor = Color.FromRgb(188, 16, 16),
 			TextColor = Colors.White,
 			Margin = new Thickness(0, 10, 0, 0)
 		};

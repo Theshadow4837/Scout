@@ -9,6 +9,9 @@ namespace Learning.Pages;
 
 public class TeamForm
 {
+
+	
+
     [JsonProperty("id")]
     public string Id { get; set; }
 
@@ -35,7 +38,9 @@ public class Forms : ContentPage
 
 	public Forms()
 	{
-		DisplayAlert("Debug, ", "Forms page loaded", "OK");
+
+        this.BackgroundColor = Color.FromRgb(12, 12, 12);
+
         Title = "Forms";
 		 
 		_listContainer = new VerticalStackLayout { Padding = 20, Spacing = 10 };
@@ -79,7 +84,7 @@ public class Forms : ContentPage
 				var btn = new Button
 				{
 					Text = form.FormTitle ?? "Untitled Form",
-					BackgroundColor = Colors.LightBlue,
+                    BackgroundColor = Color.FromRgb(188, 16, 16),
 					TextColor = Colors.Black,
 					Margin = 5,
 				};
