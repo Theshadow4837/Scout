@@ -89,6 +89,8 @@ public class Forms : ContentPage
 					Margin = 5,
 				};
 
+
+
 				btn.Clicked += async (sender, e) => await Navigation.PushAsync(new FillFormPage(form));
 
 				_listContainer.Children.Add(btn);

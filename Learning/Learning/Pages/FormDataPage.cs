@@ -44,7 +44,7 @@ public class FormDataPage : ContentPage
         var rawSubmissions = await _dbClient
             .Child("teams")
             .Child(teamCode)
-            .Child("forms")
+            .Child("Submissions")
             .OnceAsync<TeamForm>();
 
         

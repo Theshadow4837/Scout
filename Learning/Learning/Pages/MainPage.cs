@@ -41,19 +41,19 @@ public partial class MainPage : ContentPage
 
 		createFormBtn.Clicked += async (s, e) =>
 		{
-			await Navigation.PushAsync(new Pages.CreateFormPage());
-		};
+            await Shell.Current.GoToAsync(nameof(Pages.CreateFormPage));
+        };
 		
 		viewFormsBtn.Clicked += async (s, e) =>
 		{
-			await Shell.Current.Navigation.PushAsync(new Pages.Forms());
-		};
+            await Shell.Current.GoToAsync(nameof(Pages.Forms));
+        };
 
 
         viewDataBtn.Clicked += async (s, e) =>
 		{
-			await Navigation.PushAsync(new Pages.FormDataPage());
-		};
+            await Shell.Current.GoToAsync(nameof(Pages.FormDataPage));
+        };
 
 
 

@@ -9,9 +9,11 @@ namespace Learning
 
 
             Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
-            Routing.RegisterRoute(nameof(FillFormPage), typeof(FillFormPage));
-
-
+            Routing.RegisterRoute(nameof(Pages.FillFormPage), typeof(Pages.FillFormPage));
+            Routing.RegisterRoute(nameof(Pages.CreateFormPage), typeof(Pages.CreateFormPage));
+            Routing.RegisterRoute(nameof(Pages.Forms), typeof(Pages.Forms));
+            Routing.RegisterRoute(nameof(Pages.FormDataPage), typeof(Pages.FormDataPage));
+            Routing.RegisterRoute(nameof(Pages.FillFormPage), typeof(Pages.FillFormPage));
         }
 
 

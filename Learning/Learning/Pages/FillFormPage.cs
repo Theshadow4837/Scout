@@ -1,7 +1,7 @@
 using Firebase.Database;
 using Firebase.Database.Query;
 using Learning;
-using Learning.Pages;
+namespace Learning.Pages;
 
 
 public class FillFormPage : ContentPage
@@ -72,13 +72,13 @@ public class FillFormPage : ContentPage
 				FormTitle = _selectedForm.FormTitle,
 				User = userId,
 				Timstamp = DateTime.UtcNow,
-				Answers = userAnswers,
+				questions = userAnswers,
 			};
 
 			await _dbClient
 				.Child("teams")
 				.Child(teamCode)
-				.Child("formSubmissions")
+				.Child("Submissions")
 				.PostAsync(submission);
 
 			await DisplayAlert("Success", "Your answers have been submitted!", "OK");

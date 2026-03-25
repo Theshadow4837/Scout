@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+
 <Shell
     x:Class="Learning.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Learning"
+    Shell.TabBarIsVisible="False"
        Title="Learning">
 
+    
     <ShellContent
         FlyoutItemIsVisible="False"
         Shell.NavBarIsVisible="False"
@@ -19,6 +21,21 @@
         ContentTemplate="{DataTemplate local:TeamForm}"
         Route="TeamForm" />
 
+    <ShellContent
+    FlyoutItemIsVisible="False"
+    Shell.TabBarIsVisible="False"      
+    ContentTemplate="{DataTemplate local:Pages.SubmissionViewerPage}"
+        Route="SubmissionViewerPage" />
+
+    <ShellContent
+    FlyoutItemIsVisible="False"
+    Shell.TabBarIsVisible="False"      
+    ContentTemplate="{DataTemplate local:Pages.FillFormPage}"
+    Route="FillFormPage" />
+
+   
+        
+        
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems"
         >
         <ShellContent
