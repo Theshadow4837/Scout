@@ -11,4 +11,10 @@ MUST HAVE A ANDROID
 
 Run the apk a prompt should show up saying are you sure you want to install click install. The app will get installed on your phone then just make an acount/team and your ready to go
 
+username: test@gmail.com
+password 123456
+
+if it asks to join/create a team join 6390
+
+
 Firebase Link : https://firebase.google.com/
