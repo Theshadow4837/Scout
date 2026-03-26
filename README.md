@@ -17,4 +17,6 @@ password: 123456
 if it asks to join/create a team join 6390
 
 
-Firebase Link : https://firebase.google.com/
+UI MAY BE LAGGY PLEASE BE PATIENT I RECCOMEND USING THE FLYOUT MENU (THE 3 LINES ON TOP LEFT)
+
+Firebase: https://firebase.google.com/
