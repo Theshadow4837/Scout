@@ -11,6 +11,11 @@ MUST HAVE A ANDROID
 
 Run the apk a prompt should show up saying are you sure you want to install click install. The app will get installed on your phone then just make an acount/team and your ready to go
 
-Firebase Link : https://firebase.google.com/
+please make your own account
 
-It is not letting me update the demo link so i putting it here https://cdn.hackclub.com/019d3589-adb7-75bd-98b6-8f0cbd4fd9a9/com.companyname.learning.apk
+if it asks to join/create a team join 6390
+
+
+BUTTONS MAY TAKE A SECOND TO WORK SINCE THEY ARE CONNECTING TO THE DATABASE
+
+Firebase: https://firebase.google.com/
