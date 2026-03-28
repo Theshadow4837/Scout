@@ -19,3 +19,5 @@ if it asks to join/create a team join 6390
 BUTTONS MAY TAKE A SECOND TO WORK SINCE THEY ARE CONNECTING TO THE DATABASE
 
 Firebase: https://firebase.google.com/
+
+It is not letting me change demo link so here it is https://cdn.hackclub.com/019d3589-adb7-75bd-98b6-8f0cbd4fd9a9/com.companyname.learning.apk
