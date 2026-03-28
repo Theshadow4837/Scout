@@ -14,8 +14,18 @@ public class SignupPage : ContentPage
     private readonly AuthService _authService;
     private FirebaseClient _dbClient = new FirebaseClient("https://test-3b247-default-rtdb.firebaseio.com/");
 
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        await DisplayAlert("Welcome", "Create a new account to get started!", "OK");
+    }
+
     public SignupPage()
     {
+        
+     
+
 
         _authService = new AuthService();
 
