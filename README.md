@@ -16,6 +16,6 @@ please make your own account
 if it asks to join/create a team join 6390
 
 
-UI MAY BE LAGGY PLEASE BE PATIENT I RECCOMEND USING THE FLYOUT MENU (THE 3 LINES ON TOP LEFT)
+BUTTONS MAY TAKE A SECOND TO WORK SINCE THEY ARE CONNECTING TO THE DATABASE
 
 Firebase: https://firebase.google.com/
